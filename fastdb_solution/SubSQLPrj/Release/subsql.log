@@ -1,0 +1,59 @@
+﻿生成启动时间为 2019/7/10 11:33:01。
+     1>项目“D:\开发\fastdb\subsqlprj\subsql.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“.\Release\subsql.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\inc /Zi /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D _WIN32 /D NDEBUG /D _CONSOLE /D USE_LOCALE_SETTINGS /D USE_STD_STRING /D AUTOINCREMENT_SUPPORT /D THROW_EXCEPTION_ON_ERROR /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\subsql.cpp
+         subsql.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Release\subsql.exe.embed.manifest.res" .\Release\subsql_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Release\subsql.exe" /INCREMENTAL /NOLOGO ..\Release\fastdb.lib odbc32.lib odbccp32.lib wsock32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\subsql.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:".\Release/subsql.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release\subsql.lib" /MACHINE:X86 .\Release\subsql.exe.embed.manifest.res
+         .\Release/subsql.obj
+         "D:\开发\fastdb\Release\fastdb.lib"
+     1>LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/OPT:ICF”规范)
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _strstr 已经在 LIBCMT.lib(strstr.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: __localtime64 已经在 LIBCMT.lib(loctim64.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _strftime 已经在 LIBCMT.lib(strftime.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: "public: class std::exception & __thiscall std::exception::operator=(class std::exception const &)" (??4exception@std@@QAEAAV01@ABV01@@Z) 已经在 LIBCMT.lib(stdexcpt.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _sprintf 已经在 LIBCMT.lib(sprintf.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: "public: virtual __thiscall std::exception::~exception(void)" (??1exception@std@@UAE@XZ) 已经在 LIBCMT.lib(stdexcpt.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: "public: __thiscall std::exception::exception(void)" (??0exception@std@@QAE@XZ) 已经在 LIBCMT.lib(stdexcpt.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _tolower 已经在 LIBCMT.lib(tolower.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _abort 已经在 LIBCMT.lib(abort.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _fprintf 已经在 LIBCMT.lib(fprintf.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: ___iob_func 已经在 LIBCMT.lib(_file.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _exit 已经在 LIBCMT.lib(crt0dat.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: "public: __thiscall std::exception::exception(char const * const &)" (??0exception@std@@QAE@ABQBD@Z) 已经在 LIBCMT.lib(stdexcpt.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _memmove 已经在 LIBCMT.lib(memmove.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: __strnicoll 已经在 LIBCMT.lib(strnicol.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: "public: __thiscall std::exception::exception(class std::exception const &)" (??0exception@std@@QAE@ABV01@@Z) 已经在 LIBCMT.lib(stdexcpt.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _strncmp 已经在 LIBCMT.lib(strncmp.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _isalnum 已经在 LIBCMT.lib(_ctype.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _isalpha 已经在 LIBCMT.lib(_ctype.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _sscanf 已经在 LIBCMT.lib(sscanf.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _isdigit 已经在 LIBCMT.lib(_ctype.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _isspace 已经在 LIBCMT.lib(_ctype.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _strchr 已经在 LIBCMT.lib(strchr.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _fclose 已经在 LIBCMT.lib(fclose.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _ftell 已经在 LIBCMT.lib(ftell.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _fseek 已经在 LIBCMT.lib(fseek.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _fopen 已经在 LIBCMT.lib(fopen.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _getc 已经在 LIBCMT.lib(fgetc.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _ungetc 已经在 LIBCMT.lib(ungetc.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _fflush 已经在 LIBCMT.lib(fflush.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _vsprintf 已经在 LIBCMT.lib(vsprintf.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _malloc 已经在 LIBCMT.lib(malloc.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _free 已经在 LIBCMT.lib(free.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: _printf 已经在 LIBCMT.lib(printf.obj) 中定义
+     1>MSVCRT.lib(ti_inst.obj) : error LNK2005: "private: __thiscall type_info::type_info(class type_info const &)" (??0type_info@@AAE@ABV0@@Z) 已经在 LIBCMT.lib(typinfo.obj) 中定义
+     1>MSVCRT.lib(ti_inst.obj) : error LNK2005: "private: class type_info & __thiscall type_info::operator=(class type_info const &)" (??4type_info@@AAEAAV0@ABV0@@Z) 已经在 LIBCMT.lib(typinfo.obj) 中定义
+     1>MSVCRT.lib(MSVCR100.dll) : error LNK2005: __stricmp 已经在 LIBCMT.lib(stricmp.obj) 中定义
+            正在创建库 .\Release\subsql.lib 和对象 .\Release\subsql.exp
+     1>LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+     1>Release\subsql.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
+     1>已完成生成项目“D:\开发\fastdb\subsqlprj\subsql.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:03.01

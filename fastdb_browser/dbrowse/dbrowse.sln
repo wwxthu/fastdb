@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cli", "..\make\cli.vcxproj", "{2FCC6885-DD51-87CC-A1E8-7F12298F5E9F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dbrowse", "..\make\dbrowse.vcxproj", "{A596A1D1-0F3F-A96B-911D-6AE68F3F6DA7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fastdb_lib", "..\make\fastdb_lib.vcxproj", "{B37C3292-60F6-538D-F260-45ABDAFCC909}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "subsql", "..\make\subsql.vcxproj", "{D7963192-AF8B-4B52-F936-3E9B1848A211}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FCC6885-DD51-87CC-A1E8-7F12298F5E9F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2FCC6885-DD51-87CC-A1E8-7F12298F5E9F}.Release|Win32.ActiveCfg = Release|Win32
+		{A596A1D1-0F3F-A96B-911D-6AE68F3F6DA7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A596A1D1-0F3F-A96B-911D-6AE68F3F6DA7}.Release|Win32.ActiveCfg = Release|Win32
+		{B37C3292-60F6-538D-F260-45ABDAFCC909}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B37C3292-60F6-538D-F260-45ABDAFCC909}.Release|Win32.ActiveCfg = Release|Win32
+		{D7963192-AF8B-4B52-F936-3E9B1848A211}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D7963192-AF8B-4B52-F936-3E9B1848A211}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

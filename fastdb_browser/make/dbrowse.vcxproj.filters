@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{37d2915a-8718-405b-a1a3-eaec5253a5b5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{52dbadfb-3124-439d-9eae-ad49c264a99e}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{ee467c73-1a4d-4ec1-ad48-5d449dcf06f5}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\dbrowse\aboutdlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbrowse\ChildFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbrowse\dbrowse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbrowse\dbrowseview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbrowse\exporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbrowse\helpview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbrowse\mainfrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbrowse\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\dbrowse\dbrowse.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\dbrowse\aboutdlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbrowse\ChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbrowse\dbrowseview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbrowse\exporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbrowse\helpview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbrowse\mainfrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbrowse\queryprompter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbrowse\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbrowse\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\dbrowse\res\arraycont.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\dataview.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\dbrowse.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\dbrowsedoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\dbView.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\detail.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\fieldedit.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\maingui.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\query.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\schemaView.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\toolbar.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\uml.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\dbrowse\res\dbrowser.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\src\dbrowse\res\dbrowse.exe.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+</Project>

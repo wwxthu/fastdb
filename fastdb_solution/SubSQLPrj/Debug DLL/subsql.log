@@ -1,0 +1,28 @@
+﻿生成启动时间为 2019/7/31 17:18:45。
+     1>项目“D:\code\fastdb\subsqlprj\subsql.vcxproj”在节点 3 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug DLL\subsql.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\inc /ZI /nologo /W3 /WX- /Od /Oy- /D FASTDB_DLL /D WIN32 /D _WIN32 /D _DEBUG /D _CONSOLE /D USE_LOCALE_SETTINGS /D USE_STD_STRING /D AUTOINCREMENT_SUPPORT /D THROW_EXCEPTION_ON_ERROR /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\subsql.cpp
+         subsql.cpp
+       ManifestResourceCompile:
+         所有输出均为最新。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(D:\code\fastdb\subsqlprj\Debug DLL\subsql.exe) 与 Linker 的 OutputFile 属性值(D:\code\fastdb\subsqlprj\Debug\subsql.exe)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\subsql.exe" /INCREMENTAL /NOLOGO "..\Debug DLL\fastdb.lib" odbc32.lib odbccp32.lib wsock32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug DLL\subsql.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Debug\subsql.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"Debug DLL\subsql.lib" /MACHINE:X86 "Debug DLL\subsql.exe.embed.manifest.res"
+         .\Debug/subsql.obj
+         "D:\code\fastdb\Debug DLL\fastdb.lib"
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug DLL\subsql.exe.embed.manifest" /manifest "Debug DLL\subsql.exe.intermediate.manifest"
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         subsql.vcxproj -> D:\code\fastdb\subsqlprj\Debug DLL\subsql.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug DLL\subsql.unsuccessfulbuild”。
+         正在对“Debug DLL\subsql.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\code\fastdb\subsqlprj\subsql.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.20

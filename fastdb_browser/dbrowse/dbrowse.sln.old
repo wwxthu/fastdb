@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cli", "..\make\cli.vcproj", "{76FB1EE7-35CF-4BAA-9545-2F3CBC749951}"
+	ProjectSection(ProjectDependencies) = postProject
+		{385768A7-1B12-4F75-903F-F53842355C68} = {385768A7-1B12-4F75-903F-F53842355C68}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dbrowse", "..\make\dbrowse.vcproj", "{A4D479E8-A050-4EF4-9410-572135502AAA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{385768A7-1B12-4F75-903F-F53842355C68} = {385768A7-1B12-4F75-903F-F53842355C68}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fastdb_lib", "..\make\fastdb_lib.vcproj", "{385768A7-1B12-4F75-903F-F53842355C68}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "subsql", "..\make\subsql.vcproj", "{1186416A-DD02-407A-A572-6AA93B5E88D2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{385768A7-1B12-4F75-903F-F53842355C68} = {385768A7-1B12-4F75-903F-F53842355C68}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{76FB1EE7-35CF-4BAA-9545-2F3CBC749951}.Debug.ActiveCfg = Debug|Win32
+		{76FB1EE7-35CF-4BAA-9545-2F3CBC749951}.Debug.Build.0 = Debug|Win32
+		{76FB1EE7-35CF-4BAA-9545-2F3CBC749951}.Release.ActiveCfg = Release|Win32
+		{76FB1EE7-35CF-4BAA-9545-2F3CBC749951}.Release.Build.0 = Release|Win32
+		{A4D479E8-A050-4EF4-9410-572135502AAA}.Debug.ActiveCfg = Debug|Win32
+		{A4D479E8-A050-4EF4-9410-572135502AAA}.Debug.Build.0 = Debug|Win32
+		{A4D479E8-A050-4EF4-9410-572135502AAA}.Release.ActiveCfg = Release|Win32
+		{A4D479E8-A050-4EF4-9410-572135502AAA}.Release.Build.0 = Release|Win32
+		{385768A7-1B12-4F75-903F-F53842355C68}.Debug.ActiveCfg = Debug|Win32
+		{385768A7-1B12-4F75-903F-F53842355C68}.Debug.Build.0 = Debug|Win32
+		{385768A7-1B12-4F75-903F-F53842355C68}.Release.ActiveCfg = Release|Win32
+		{385768A7-1B12-4F75-903F-F53842355C68}.Release.Build.0 = Release|Win32
+		{1186416A-DD02-407A-A572-6AA93B5E88D2}.Debug.ActiveCfg = Debug|Win32
+		{1186416A-DD02-407A-A572-6AA93B5E88D2}.Debug.Build.0 = Debug|Win32
+		{1186416A-DD02-407A-A572-6AA93B5E88D2}.Release.ActiveCfg = Release|Win32
+		{1186416A-DD02-407A-A572-6AA93B5E88D2}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

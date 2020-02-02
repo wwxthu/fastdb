@@ -1,0 +1,33 @@
+﻿生成启动时间为 2019/7/10 11:31:27。
+     1>项目“D:\开发\fastdb\subsqlprj\subsql.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release DLL\subsql.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       MakeDirsForCl:
+         正在创建目录“D:\开发\fastdb\subsqlprj\.\Release”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\inc /Zi /nologo /W3 /WX- /O2 /Oy- /D FASTDB_DLL /D WIN32 /D _WIN32 /D NDEBUG /D _CONSOLE /D USE_LOCALE_SETTINGS /D USE_STD_STRING /D AUTOINCREMENT_SUPPORT /D THROW_EXCEPTION_ON_ERROR /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\subsql.cpp
+         subsql.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Release DLL\subsql.exe.embed.manifest.res" "Release DLL\subsql_manifest.rc" 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Release DLL\subsql.exe" /INCREMENTAL /NOLOGO "..\Release DLL\fastdb.lib" odbc32.lib odbccp32.lib wsock32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release DLL\subsql.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:".\Release/subsql.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"Release DLL\subsql.lib" /MACHINE:X86 "Release DLL\subsql.exe.embed.manifest.res"
+         .\Release/subsql.obj
+         "D:\开发\fastdb\Release DLL\fastdb.lib"
+     1>LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/OPT:ICF”规范)
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Release DLL\subsql.exe.embed.manifest" /manifest "Release DLL\subsql.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Release DLL\subsql.exe.embed.manifest.res" "Release DLL\subsql_manifest.rc" 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Release DLL\subsql.exe" /INCREMENTAL /NOLOGO "..\Release DLL\fastdb.lib" odbc32.lib odbccp32.lib wsock32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release DLL\subsql.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:".\Release/subsql.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"Release DLL\subsql.lib" /MACHINE:X86 "Release DLL\subsql.exe.embed.manifest.res"
+         .\Release/subsql.obj
+         "D:\开发\fastdb\Release DLL\fastdb.lib"
+     1>LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/OPT:ICF”规范)
+         subsql.vcxproj -> D:\开发\fastdb\subsqlprj\Release DLL\subsql.exe
+       FinalizeBuildStatus:
+         正在删除文件“Release DLL\subsql.unsuccessfulbuild”。
+         正在对“Release DLL\subsql.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\开发\fastdb\subsqlprj\subsql.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.75

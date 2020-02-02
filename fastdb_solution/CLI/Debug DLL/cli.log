@@ -1,0 +1,29 @@
+﻿生成启动时间为 2019/7/31 17:18:44。
+     1>项目“D:\code\fastdb\CLI\cli.vcxproj”在节点 3 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug DLL\cli.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\inc /ZI /nologo /W3 /WX- /Od /Oy- /D FASTDB_DLL /D WIN32 /D _WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\cli.cpp ..\src\repsock.cpp ..\src\stdtp.cpp ..\src\w32sock.cpp
+         cli.cpp
+         repsock.cpp
+         stdtp.cpp
+         w32sock.cpp
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug DLL\cli.dll" /NOLOGO wsock32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug DLL\cli.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\code\fastdb\CLI\Debug DLL\cli.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug DLL\cli.lib" /MACHINE:X86 /DLL .\Debug/cli.obj
+         .\Debug/repsock.obj
+         .\Debug/stdtp.obj
+         .\Debug/w32sock.obj
+     1>cli.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:ICF”规范)
+            正在创建库 Debug DLL\cli.lib 和对象 Debug DLL\cli.exp
+         cli.vcxproj -> D:\code\fastdb\CLI\Debug DLL\cli.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"Debug DLL\cli.dll;#2" /manifest "Debug DLL\cli.dll.intermediate.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Debug DLL\cli.unsuccessfulbuild”。
+         正在对“Debug DLL\cli.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\code\fastdb\CLI\cli.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.10

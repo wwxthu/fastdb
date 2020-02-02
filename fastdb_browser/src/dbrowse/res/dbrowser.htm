@@ -1,0 +1,376 @@
+<html>
+
+<head>
+<title>No title</title>
+<meta name="generator" content="Namo WebEditor v5.0">
+<meta name="namo-theme" content="Theme\Business_Classic\Black Box">
+<style><!--
+body { color:rgb(0,0,0); font-family:Arial;}
+th { color:rgb(0,0,0); font-family:Arial;}
+td { color:rgb(0,0,0); font-family:Arial;}
+h1 { color:rgb(0,0,0); font-size:12pt; font-family:Arial;}
+h2 { color:rgb(128,128,128); font-size:12pt; font-family:Arial;}
+p.namo-list { color:rgb(255,0,0); font-size:12pt; font-family:Arial;}
+p.namo-sublist { color:rgb(128,128,128); font-size:10pt; font-family:Arial;}
+a:link {}
+a:visited {}
+a:active {}
+--></style>
+</head>
+
+<body bgcolor="white" text="#000000" link="red" vlink="gray" alink="#FE8B5A">
+<h1><font face="Arial">FastDB Browser Reference</font></h1>
+<h2>Purpose</h2>
+<p>The FastDB browser is a frontend tool to monitor content and structure of 
+FastDB databases. </p>
+<p>FastDB is a Main Memory Object Relational Database Management System (MMORDBMS) 
+written by Konstantin A. Knizhnik and is available <a href="http://www.garret.ru/~knizhnik/">here</a>.</p>
+<p>Some important features related to this browser and its fields of usage are:</p>
+<ul>
+    <li>It stores data in virtual memory which can be accessed from different 
+    processes on the same machine the same time. So this browser can be used 
+    to watch&nbsp;the state of applications which are driven by those databases.</li>
+    <li>Data is most times referenced, not copied or &quot;marshalled&quot; 
+    -&nbsp;making access very 
+    fast (similar like shared memory). So FastDB can be used as communication 
+    media for applications.</li>
+    <li>Data is structured in &quot;tables&quot; which are bidirectional linked by 
+    reference fields allowing entity relationship modelling with guaranteed 
+    referential integrity</li>
+    <li>a SQL like query language can be used to access content&nbsp;and database 
+    schema- but macros allow C++ programmers to persist most C++ classes in 
+    the database.</li>
+    <li>logless transactions and locking mechanisms&nbsp;are supported to make 
+    concurrent access of applications much easier.</li>
+</ul>
+<p>Using the FastDB browser one can watch schema and relationships of tables 
+and follow any links in the content. The FastDB browser is mainly intended to 
+monitor systems which are implemented as a set of FastDB applications.</p>
+<p>For debugging purposes changing of scalar values is supported- the current 
+release does not support:</p>
+<ul>
+    <li>changing array content or references (will be available with the next 
+    release)</li>
+    <li>inserting and deletion of new records (will be available in a later 
+    release)</li>
+    <li>creating and dropping tables (not planned anytime since schema creation 
+    can be&nbsp;done when persisting C++ classes)</li>
+</ul>
+<h2>User Interface</h2>
+<p><img src="maingui.gif" width="400" height="300" border="0" alt="maingui.gif"></p>
+<p>The browser is a Windows application with Multiple Document Interface (MDI). 
+In a frame window different views show different aspects of the database. You 
+can open different databases in several windows.</p>
+<h2>Working with databases</h2>
+<p>Use the &quot;File-Open&quot; menu entry or the folder- button of the toolbar 
+to get&nbsp;a file-open dialog, where you can navigate to any FastDB database 
+stored on disk. After choosing such a file with the default extension FDB you 
+will get a <a href="#Database View">database view</a>.</p>
+<h2><a name="Navigation">Navigation</a></h2>
+<p>In all views, clicking on table names opens new views dependent on key 
+combinations while clicking:</p>
+<ul>
+    <li>click without any key pressed to get the <a href="# Full Table Content View">full content</a> of the table</li>
+    <li>click with SHIFT key pressed to get a subset of the table, which is 
+    <a href="#query">filtered</a> by a Query condition</li>
+    <li>click with CONTROL key pressed to get a schema view giving information 
+    about the table structure (<a href="#Table Schema View">schema</a>)</li>
+</ul>
+<p>Also it is possible to click at object IDs, which are hexadecimal numbers 
+prefixed by a number sign (#). This will open a <a href="#Detail view">detail 
+view</a> of the record the object ID references&nbsp;to.</p>
+<p>The position of all columns in all views can be changed by drag&amp;drop 
+the column's title.</p>
+<h2><a name="Database View">Database View</a></h2>
+<p>For each database exists exactly one database view which lists all tables 
+contained in the database.</p>
+<p><img src="dbView.gif" width="265" height="178" border="0" alt="img1.gif"></p>
+<p>You can click at any table name to open new views as written at <a href="#Navigation">navigation</a>. 
+All other views created this way or following further links depend on this view 
+and get destroyed when their database view is closed.</p>
+<h2><a name="Table Schema View">Table Schema View</a></h2>
+<p>After clicking a tablename while the CONTROL key was pressed, a table schema 
+view like the following appears:</p>
+<p><img src="schemaView.gif" width="452" height="203" border="0" alt="img2.gif"></p>
+<p>This view displays for each column of the table:</p>
+<ul>
+    <li>its name (Fieldname)</li>
+    <li>its 
+datatype (Type)</li>
+    <li>the table which is referred in case of a referential column</li>
+    <li>the name of the column of that table that is used for backward referencing 
+to&nbsp;this table (So each referential link can be in both directions for making 
+sure referential integrity of the database)</li>
+    <li style="page-break-before:always;">.a column &quot;flags&quot; is used to mask special column attributes like 
+being indexed or hashed.</li>
+</ul>
+<p>The following datatypes are supported by FastDB</p>
+<table border="1" width="566">
+    <tr>
+        <td width="132">
+            <p><b>Type displayed</b></p>
+        </td>
+        <td width="418">
+            <p><b>meaning</b></p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>oid</p>
+        </td>
+        <td width="418">
+            <p>object id (reference)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>int1</p>
+        </td>
+        <td width="418">
+            <p>8 bit signed integer range -128 .. 127</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>int2</p>
+        </td>
+        <td width="418">
+            <p>16 bit signed integer range -32768 .. 32767</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>int4</p>
+        </td>
+        <td width="418">
+            <p>32 bit signed integer range &nbsp;-2147483648 .. 2147483647</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>int8</p>
+        </td>
+        <td width="418">
+            <p>64 bit signed integer</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>real4</p>
+        </td>
+        <td width="418">
+            <p>32 bit low precision floating point&nbsp;(approx 7 digits precision)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>real8</p>
+        </td>
+        <td width="418">
+            <p>64 bit high precision floating point</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>string</p>
+        </td>
+        <td width="418">
+            <p>zero terminated, dynamic length character string</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>&amp;string</p>
+        </td>
+        <td width="418">
+            <p>address of a string</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>oid[ ]</p>
+        </td>
+        <td width="418">
+            <p>vector of references (any length)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>int1[ ]</p>
+        </td>
+        <td width="418">
+            <p>vector of int1 values (any length)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>int2[ ]</p>
+        </td>
+        <td width="418">
+            <p>vector of int2 values (any length)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>int4[ ]</p>
+        </td>
+        <td width="418">
+            <p>vector of int4 values (any length)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>int8[ ]</p>
+        </td>
+        <td width="418">
+            <p>vector of int8&nbsp; values (any length)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>real4[ ]</p>
+        </td>
+        <td width="418">
+            <p>vector of real4 values (any length)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>real8[ ]</p>
+        </td>
+        <td width="418">
+            <p>vector of int8 values (any length)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>string[ ]</p>
+        </td>
+        <td width="418">
+            <p>vector of strings (any length)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>auto</p>
+        </td>
+        <td width="418">
+            <p>autoincrement field (read only)</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="132">
+            <p>unknown</p>
+        </td>
+        <td width="418">
+            <p>application specific extension type- not accessible to other 
+            apps and the browser</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;The table names in the RefTable column can be clicked to <a href="#Navigation">navigate</a>.</p>
+<h2><a name=" Full Table Content View">&nbsp;Full Table Content View</a></h2>
+<p>When clicking a tablename without pressing a key, a table content view like 
+the following is opened showing any records currently stored in the database:</p>
+<p><img src="dataview.gif" width="511" height="189" border="0" alt="img2.gif"></p>
+<p>All record fields are showed as columns with the fieldname as column title. 
+As first column the record's object ID is displayed. It can be clicked to get 
+a <a href="#Detail view">detail view</a> of that record. The detail view can 
+be used to modify the record's data. The content of fields containing arrays 
+can not be viewed in this view, just click at the arrays placeholder (oid[] 
+in the example to open an <a href="#Array Content View">array content view</a>.</p>
+<h2><a name="query"></a>Filtered Table Content View (Query)</h2>
+<p>When clicking a tablename while pressing the SHIFT key, a query dialog appears:</p>
+<p><img src="query.gif" width="383" height="141" border="0" alt="img3.gif"></p>
+<p>Here you can use SQL- syntax as used for the&nbsp;WHERE part of a SELECT 
+statement. All following views which inherit from this query will show the data 
+filtered by this query- condition. If you cancel this dialog, the full content 
+will be displayed. If you enter an unrecognized query (e.g. by using invalid 
+fieldnames), you will get an error message, in all other cases a <a href="# Full Table Content View">table 
+content view</a> appears.</p>
+<h2><a name="Array Content View">Array Content View</a></h2>
+<p>When clicking in a table content view on the placeholder of an array field, 
+an array content view like the following appears:</p>
+<p><img src="arraycont.gif" width="290" height="110" border="0" alt="img4.gif"></p>
+<p>The view's caption will tell you the object ID of the record containing this 
+array field in square brackets. Just one column is displayed with the array 
+field's name as column title. For each array element a row displaying its content 
+is shown. In the case above the array contains references which can be clicked 
+to get detail views of the referenced records.</p>
+<h2><a name="Detail view">Detail view</a></h2>
+<p>After clicking on an object ID identifying a record contained in a table, 
+a detail view like the following will be showed:</p>
+<p><img src="detail.gif" width="292" height="241" border="0" alt="img5.gif"></p>
+<p>The title of this view tells you the object ID of the record from which the 
+data displayed is taken. For each of the record's fields a row is displayed. 
+The first column lists the fieldnames, the second row shows the content of that 
+field for this record. Again, for array fields only a placeholder is shown. 
+Clicking on that placeholder opens the array field's content in a new <a href="#Array Content View">array 
+content view</a>.</p>
+<p>After enabling the <a href="#Editing">editing</a> mode, you can click on 
+values to change them. Currently only scalar values can be changed (no references 
+or array fields).</p>
+<h2><a name="Editing"></a>Editing</h2>
+<p>After clicking the pencil- icon in the toolbar (or using the menu option 
+&quot;Edit-Start editing&quot;) you can modify values displayed in the <a href="#Detail view">detail 
+view</a> after clicking on them:</p>
+<p><img src="toolbar.gif" width="254" height="20" border="0" alt="img6.gif"></p>
+<p>The pencil- icon appears pressed while in editing mode.</p>
+<p>You can leave the editing mode by pressing either&nbsp;the &quot;commit&quot; 
+(arrow pointing explanation mark)&nbsp;or the &quot;rollback&quot; button (cancel 
+symbol and exclamation mark) or the corresponding menu options &quot;Edit-Commit 
+changes&quot; or &quot;Edit-Rollback changes&quot;.</p>
+<p>When clicking on a value for changing it, a frame is drawn around the field 
+editor:</p>
+<p><img src="fieldedit.gif" width="430" height="241" border="0" alt="img7.gif"></p>
+<p>After clicking into another field and having modified something&nbsp;you 
+will be asked to confirm the changes. If doing so, the data will be stored immediately 
+and all views containing that data will get updated.</p>
+<p>If leaving the editing mode by using &quot;commit&quot; or &quot;rollback&quot; 
+functions you can decide to store or revoke your changes also.</p>
+<h2><a name="Refreshing all views">Refreshing all views</a></h2>
+<p>By clicking the toolbar button with the eyeglasses- button or using menu 
+option &quot;View-Reread data views&quot; any open views get updated with the 
+data currently contained in the database or get closed if e.g. records have 
+been deleted. This is an important feature since all data can have been modified 
+by other applications. Future browser releases will have a notification mechanism 
+which can be used by applications to force a reread of the views. Also a user 
+settable refresh interval will be supported, so the FastDB browser can be used 
+as application monitor.</p>
+<h2><a name="Arranging views">Arranging views</a></h2>
+<p>The window menu supports the normal features of a MDI- application.</p>
+<p>So you can tile or cascade all view windows or use this menu to place hidden 
+views into the foreground. There are options to disable toolbar and status line.</p>
+<h2><a name="Help">Help</a></h2>
+<p>The question mark icon or &quot;Help-Help&quot; menu option will display 
+this hypertext help window.</p>
+<h2><a name="Importing data from XML files">Importing data from XML files</a></h2>
+<p>The content of the working database (which is shown by the&nbsp;database 
+view window) can be replaced by the content of an XML file exported earlier 
+by using &quot;File-Import data from XML-file&quot;. This can be used also to 
+migrate old content into a new database schema. First you open the old database 
+and export its data into an XML file, then open the new database and import 
+that data into it.</p>
+<h2><a name="Exporting data into an XML file">Exporting data into an XML file</a></h2>
+<p>Using&nbsp;the menu-command &quot;File-Export Data to XML File&quot; the 
+content of a database can be written into an XML- file. This is useful to migrate 
+database content into a database with modified scheme or a database other than 
+FastDB which also supports XML import/export.</p>
+<h2><a name="Export schema to CASE tool">Export schema to CASE&nbsp;tool</a></h2>
+<p>This menu command generates a&nbsp;C++ header-file which can be parsed by 
+a CASE tool to produce an UML&nbsp;class diagram. I choosed C++ source code 
+as output instead of XMI since the latter is supported only by some expensive 
+UML- CASE-Tools and most even cheaper&nbsp;UML- tools are pretty able to parse 
+that subset of C++ which is needed to visualize databases as UML diagrams.</p>
+<p>As an example the database of the BUGDB sample which comes with FastDB is 
+shown. The C++ Header file which was created from the BUGDB database was parsed 
+with UMLStudio 7.1 resulting in&nbsp;the following class diagram:</p>
+<p><img src="uml.gif" width="581" height="557" border="0" alt="img1.gif"></p>
+<p>Since this database has lots of references between its tables, the diagram 
+looks&nbsp;pretty complicated. Databases with fewer table interconnections should 
+be easier to read or some work must be done in the UML tool to make the diagram 
+easier to read.</p>
+<p>&nbsp;</p>
+</body>
+
+</html>
